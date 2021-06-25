@@ -1,0 +1,307 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://Asset/UI/minimize-red.png" type="Texture" id=1]
+[ext_resource path="res://Asset/UI/minimize-blue.png" type="Texture" id=2]
+[ext_resource path="res://Asset/UI/close-red.png" type="Texture" id=3]
+[ext_resource path="res://Asset/UI/close-blue.png" type="Texture" id=4]
+[ext_resource path="res://Asset/UI/maximize-blue.png" type="Texture" id=5]
+[ext_resource path="res://Asset/UI/maximize-red.png" type="Texture" id=6]
+[ext_resource path="res://Scene/Script/Client.gd" type="Script" id=7]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://Asset/Font/Cartoon Movie.otf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 32
+font_data = SubResource( 1 )
+
+[sub_resource type="DynamicFontData" id=3]
+font_path = "res://Asset/Font/PlaytoonDEMO.ttf"
+
+[sub_resource type="DynamicFont" id=4]
+size = 45
+font_data = SubResource( 3 )
+
+[sub_resource type="DynamicFontData" id=5]
+font_path = "res://Asset/Font/Stoehr Numbers.ttf"
+
+[sub_resource type="DynamicFont" id=6]
+size = 32
+font_data = SubResource( 5 )
+
+[sub_resource type="DynamicFontData" id=7]
+font_path = "res://Asset/Font/Cartoon Movie.otf"
+
+[sub_resource type="DynamicFont" id=8]
+size = 32
+font_data = SubResource( 7 )
+
+[sub_resource type="DynamicFontData" id=9]
+font_path = "res://Asset/Font/Cartoon Movie.otf"
+
+[sub_resource type="DynamicFont" id=10]
+size = 32
+font_data = SubResource( 9 )
+
+[sub_resource type="DynamicFontData" id=11]
+font_path = "res://Asset/Font/PlaytoonDEMO.ttf"
+
+[sub_resource type="DynamicFont" id=12]
+size = 45
+extra_spacing_top = 5
+font_data = SubResource( 11 )
+
+[node name="Client" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background-VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TopBar-MarginContainer" type="MarginContainer" parent="Background-VBoxContainer"]
+margin_right = 1280.0
+margin_bottom = 55.0
+rect_min_size = Vector2( 0, 50 )
+custom_constants/margin_right = 10
+custom_constants/margin_top = 5
+custom_constants/margin_left = 10
+
+[node name="TopBar-HBoxContainer" type="HBoxContainer" parent="Background-VBoxContainer/TopBar-MarginContainer"]
+margin_left = 10.0
+margin_top = 5.0
+margin_right = 1270.0
+margin_bottom = 55.0
+rect_min_size = Vector2( 0, 50 )
+
+[node name="ControlIconPlace-MarginContainer" type="MarginContainer" parent="Background-VBoxContainer/TopBar-MarginContainer/TopBar-HBoxContainer"]
+margin_right = 1128.0
+margin_bottom = 50.0
+size_flags_horizontal = 3
+
+[node name="Minimize-MarginContainer" type="MarginContainer" parent="Background-VBoxContainer/TopBar-MarginContainer/TopBar-HBoxContainer"]
+margin_left = 1132.0
+margin_right = 1172.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 40, 0 )
+custom_constants/margin_right = 5
+custom_constants/margin_top = 5
+custom_constants/margin_left = 5
+custom_constants/margin_bottom = 5
+
+[node name="Miniimize-TextureButton" type="TextureButton" parent="Background-VBoxContainer/TopBar-MarginContainer/TopBar-HBoxContainer/Minimize-MarginContainer"]
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 35.0
+margin_bottom = 45.0
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 2 )
+texture_hover = ExtResource( 1 )
+expand = true
+stretch_mode = 5
+
+[node name="Maximize-MarginContainer" type="MarginContainer" parent="Background-VBoxContainer/TopBar-MarginContainer/TopBar-HBoxContainer"]
+margin_left = 1176.0
+margin_right = 1216.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 40, 0 )
+custom_constants/margin_right = 5
+custom_constants/margin_top = 5
+custom_constants/margin_left = 5
+custom_constants/margin_bottom = 5
+
+[node name="Maximize-TextureButton" type="TextureButton" parent="Background-VBoxContainer/TopBar-MarginContainer/TopBar-HBoxContainer/Maximize-MarginContainer"]
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 35.0
+margin_bottom = 45.0
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 5 )
+texture_hover = ExtResource( 6 )
+expand = true
+stretch_mode = 5
+
+[node name="Close-MarginContainer" type="MarginContainer" parent="Background-VBoxContainer/TopBar-MarginContainer/TopBar-HBoxContainer"]
+margin_left = 1220.0
+margin_right = 1260.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 40, 0 )
+
+[node name="Close-TextureButton" type="TextureButton" parent="Background-VBoxContainer/TopBar-MarginContainer/TopBar-HBoxContainer/Close-MarginContainer"]
+margin_right = 40.0
+margin_bottom = 50.0
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 3 )
+expand = true
+stretch_mode = 5
+
+[node name="Context-MarginContainer" type="MarginContainer" parent="Background-VBoxContainer"]
+margin_top = 59.0
+margin_right = 1280.0
+margin_bottom = 720.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 10
+custom_constants/margin_top = 10
+custom_constants/margin_left = 10
+custom_constants/margin_bottom = 10
+
+[node name="Items-VBoxContainer" type="VBoxContainer" parent="Background-VBoxContainer/Context-MarginContainer"]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 1270.0
+margin_bottom = 651.0
+
+[node name="Chat-TextEdit" type="TextEdit" parent="Background-VBoxContainer/Context-MarginContainer/Items-VBoxContainer"]
+margin_right = 1260.0
+margin_bottom = 454.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 2 )
+text = "In the name of god"
+readonly = true
+
+[node name="Panel-VBoxContainer" type="VBoxContainer" parent="Background-VBoxContainer/Context-MarginContainer/Items-VBoxContainer"]
+margin_top = 458.0
+margin_right = 1260.0
+margin_bottom = 641.0
+
+[node name="AddressUsername-MarginContainer" type="MarginContainer" parent="Background-VBoxContainer/Context-MarginContainer/Items-VBoxContainer/Panel-VBoxContainer"]
+margin_right = 1260.0
+margin_bottom = 56.0
+custom_constants/margin_top = 10
+custom_constants/margin_left = 10
+
+[node name="AddressUsername-HBoxContainer" type="HBoxContainer" parent="Background-VBoxContainer/Context-MarginContainer/Items-VBoxContainer/Panel-VBoxContainer/AddressUsername-MarginContainer"]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 1260.0
+margin_bottom = 56.0
+
+[node name="Address-Label" type="Label" parent="Background-VBoxContainer/Context-MarginContainer/Items-VBoxContainer/Panel-VBoxContainer/AddressUsername-MarginContainer/AddressUsername-HBoxContainer"]
+margin_top = 1.0
+margin_right = 206.0
+margin_bottom = 45.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.5
+custom_fonts/font = SubResource( 4 )
+text = "Address:"
+
+[node name="Address-LineEdit" type="LineEdit" parent="Background-VBoxContainer/Context-MarginContainer/Items-VBoxContainer/Panel-VBoxContainer/AddressUsername-MarginContainer/AddressUsername-HBoxContainer"]
+margin_left = 210.0
+margin_right = 829.0
+margin_bottom = 46.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.5
+custom_fonts/font = SubResource( 6 )
+text = "127.0.0.1:3333"
+align = 1
+caret_blink = true
+
+[node name="Username-MarginContainer" type="MarginContainer" parent="Background-VBoxContainer/Context-MarginContainer/Items-VBoxContainer/Panel-VBoxContainer/AddressUsername-MarginContainer/AddressUsername-HBoxContainer"]
+margin_left = 833.0
+margin_right = 1039.0
+margin_bottom = 46.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+custom_constants/margin_left = 10
+
+[node name="Username-Label" type="Label" parent="Background-VBoxContainer/Context-MarginContainer/Items-VBoxContainer/Panel-VBoxContainer/AddressUsername-MarginContainer/AddressUsername-HBoxContainer/Username-MarginContainer"]
+margin_left = 10.0
+margin_top = 1.0
+margin_right = 206.0
+margin_bottom = 45.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.5
+custom_fonts/font = SubResource( 4 )
+text = "Username:"
+
+[node name="Username-LineEdit" type="LineEdit" parent="Background-VBoxContainer/Context-MarginContainer/Items-VBoxContainer/Panel-VBoxContainer/AddressUsername-MarginContainer/AddressUsername-HBoxContainer"]
+margin_left = 1043.0
+margin_right = 1250.0
+margin_bottom = 46.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.5
+custom_fonts/font = SubResource( 8 )
+align = 1
+caret_blink = true
+
+[node name="Chat-MarginContainer" type="MarginContainer" parent="Background-VBoxContainer/Context-MarginContainer/Items-VBoxContainer/Panel-VBoxContainer"]
+margin_top = 60.0
+margin_right = 1260.0
+margin_bottom = 114.0
+custom_constants/margin_top = 10
+custom_constants/margin_left = 10
+
+[node name="Chat-HBoxContainer" type="HBoxContainer" parent="Background-VBoxContainer/Context-MarginContainer/Items-VBoxContainer/Panel-VBoxContainer/Chat-MarginContainer"]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 1260.0
+margin_bottom = 54.0
+
+[node name="Chat-Label" type="Label" parent="Background-VBoxContainer/Context-MarginContainer/Items-VBoxContainer/Panel-VBoxContainer/Chat-MarginContainer/Chat-HBoxContainer"]
+margin_right = 207.0
+margin_bottom = 44.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.2
+custom_fonts/font = SubResource( 4 )
+text = "Chat:"
+
+[node name="Chat-LineEdit" type="LineEdit" parent="Background-VBoxContainer/Context-MarginContainer/Items-VBoxContainer/Panel-VBoxContainer/Chat-MarginContainer/Chat-HBoxContainer"]
+margin_left = 211.0
+margin_right = 1250.0
+margin_bottom = 44.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 10 )
+editable = false
+caret_blink = true
+
+[node name="SendConnect-MarginContainer" type="MarginContainer" parent="Background-VBoxContainer/Context-MarginContainer/Items-VBoxContainer/Panel-VBoxContainer"]
+margin_top = 118.0
+margin_right = 1260.0
+margin_bottom = 183.0
+custom_constants/margin_top = 10
+
+[node name="SendConnect-HBoxContainer" type="HBoxContainer" parent="Background-VBoxContainer/Context-MarginContainer/Items-VBoxContainer/Panel-VBoxContainer/SendConnect-MarginContainer"]
+margin_top = 10.0
+margin_right = 1260.0
+margin_bottom = 65.0
+
+[node name="Connect-Button" type="Button" parent="Background-VBoxContainer/Context-MarginContainer/Items-VBoxContainer/Panel-VBoxContainer/SendConnect-MarginContainer/SendConnect-HBoxContainer"]
+margin_right = 209.0
+margin_bottom = 55.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.2
+custom_fonts/font = SubResource( 12 )
+text = "Connect"
+
+[node name="Send-MarginContainer" type="MarginContainer" parent="Background-VBoxContainer/Context-MarginContainer/Items-VBoxContainer/Panel-VBoxContainer/SendConnect-MarginContainer/SendConnect-HBoxContainer"]
+margin_left = 213.0
+margin_right = 1260.0
+margin_bottom = 55.0
+size_flags_horizontal = 3
+custom_constants/margin_left = 10
+
+[node name="Send-Button" type="Button" parent="Background-VBoxContainer/Context-MarginContainer/Items-VBoxContainer/Panel-VBoxContainer/SendConnect-MarginContainer/SendConnect-HBoxContainer/Send-MarginContainer"]
+margin_left = 10.0
+margin_right = 1047.0
+margin_bottom = 55.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 12 )
+disabled = true
+text = "Send"
+
+[connection signal="button_up" from="Background-VBoxContainer/TopBar-MarginContainer/TopBar-HBoxContainer/Minimize-MarginContainer/Miniimize-TextureButton" to="." method="_on_MiniimizeTextureButton_button_up"]
+[connection signal="button_up" from="Background-VBoxContainer/TopBar-MarginContainer/TopBar-HBoxContainer/Maximize-MarginContainer/Maximize-TextureButton" to="." method="_on_MaximizeTextureButton_button_up"]
+[connection signal="button_up" from="Background-VBoxContainer/TopBar-MarginContainer/TopBar-HBoxContainer/Close-MarginContainer/Close-TextureButton" to="." method="_on_CloseTextureButton_button_up"]
+[connection signal="button_up" from="Background-VBoxContainer/Context-MarginContainer/Items-VBoxContainer/Panel-VBoxContainer/SendConnect-MarginContainer/SendConnect-HBoxContainer/Connect-Button" to="." method="_on_ConnectButton_button_up"]
+[connection signal="button_up" from="Background-VBoxContainer/Context-MarginContainer/Items-VBoxContainer/Panel-VBoxContainer/SendConnect-MarginContainer/SendConnect-HBoxContainer/Send-MarginContainer/Send-Button" to="." method="_on_SendButton_button_up"]

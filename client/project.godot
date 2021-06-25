@@ -11,16 +11,20 @@ config_version=4
 [application]
 
 config/name="Client"
+run/main_scene="res://Scene/Client.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+Global="*res://Scene/Script/Global.gd"
 
 [display]
 
 window/size/width=1280
 window/size/height=720
-window/size/resizable=false
 window/size/borderless=true
 window/stretch/mode="2d"
-window/stretch/aspect="keep"
+window/stretch/aspect="expand"
 
 [physics]
 
