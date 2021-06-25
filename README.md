@@ -1,4 +1,4 @@
-# I Just Hope This Works
+# Chat App
 
 Created a chat app in godot that uses `nodejs` and `ws` as a framework to do the server side.\
 It works fine.
