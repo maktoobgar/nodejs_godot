@@ -1,12 +1,15 @@
 # I Just Hope This Works
 
-I'm gonna make a chat app in godot and use `nodejs` and `socket.io` as a framework to do the server side.\
-Hope it works.\
-And as reference matters, I'll try to add references that I will use over here.\
+Created a chat app in godot that uses `nodejs` and `ws` as a framework to do the server side.\
+It works fine.
+References from this video added down there in [Resources](#Resources) section.
 Without no further to do, let's have at it.
 
+## Client Side Preview
 
-Resources:
+![](pics/Client.png)
+
+## Resources
 
 1. Websockets Godot 3 Tutorial - Ready to use Client Example for your multiplayer game!:
    * https://www.youtube.com/watch?v=_tonScnpjGQ
