@@ -2,7 +2,7 @@
 
 Created a chat app in godot that uses `nodejs` and `ws` as a framework to do the server side.\
 It works fine.
-References from this video added down there in [Resources](#Resources) section.
+References added down here in [Resources](#Resources) section.
 Without no further to do, let's have at it.
 
 ## Client Side Preview
